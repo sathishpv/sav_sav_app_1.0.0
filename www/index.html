@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saving Savior</title>
+ 
+<!-- CSS -->
+<link rel="stylesheet" href="themes/saving.saviour.app.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+ 
+<!-- LIB -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js"></script>
+ 
+<!-- FRAMEWORK -->
+<script src="framework/parse.js"></script>
+ 
+<!-- JS -->
+<script src="js/view.index.js"></script>
+     
+</head>
+<body>
+      <div data-role="page" data-theme="a">
+            <div data-role="header" data-position="inline">
+                  <h1>Saving Savior</h1>
+            </div>
+            <div data-role="content" data-theme="a">
+                  <p>Already a user, please login</p>
+                  <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">Login</a>
+                  <button class="ui-btn ui-corner-all">Facebook Login</button>
+                  <p>New user, please sign up</p>
+                  <a href="#popupSignUp" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">Sign Up</a>
+            </div>
+ 
+            <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+                  <form method="post" id="_loginform" action="javascript:login();">
+                        <div style="padding: 10px 20px;">
+                              <label for="_username" class="ui-hidden-accessible">User Name:</label>
+                              <input type="text" name="username" id="_username" placeholder="User Name" data-theme="a" required>
+                              <label for="_password" class="ui-hidden-accessible">Password:</label>
+                              <input type="password" name="password" id="_password" placeholder="Password" data-theme="a" required>
+                              <button id="_login" type="submit" class="ui-btn ui-corner-all ui-shadow">Log In</button>
+                        </div>
+                  </form>
+            </div>
+ 
+            <div data-role="popup" id="popupSignUp" data-theme="a" class="ui-corner-all">
+                  <form method="POST" id="_registerform" action="javascript:signUp();">
+                        <div style="padding: 10px 20px;">
+                              <label for="_rusername" class="ui-hidden-accessible">User Name:</label>
+                              <input type="text" name="rusername" id="_rusername" placeholder="User Name" data-theme="a" required>
+                              <label for="_password" class="ui-hidden-accessible">Password:</label>
+                              <input type="password" name="rpassword" id="_rpassword" placeholder="Password" data-theme="a" required>
+                              <label for="_email" class="ui-hidden-accessible">Email:</label>
+                              <input type="email" name="email" id="_email" placeholder="Email" data-theme="a" required>
+                              <button type="submit" id="_signup" class="ui-btn ui-corner-all ui-shadow">Sign Up</button>
+                        </div>
+                  </form>
+            </div>
+      </div>
+</body>
+</html>
